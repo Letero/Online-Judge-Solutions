@@ -3,11 +3,6 @@
 
 int findConsecutiveOnes(int *array, int blocks)
 {
-    for (int j = 0; j < blocks; ++j)
-    {
-        printf("%d ", array[j]);
-    }
-    puts("");
     int theLongest = 0;
     int temp = 0;
     for (int i = 0; i < blocks; ++i)
@@ -65,14 +60,13 @@ int *arrayCopy(int *arr, int size)
 
 int main(void)
 {
-    int tests, blocks, money, result = 0;
+    int tests, blocks, money, result;
     scanf("%d", &tests);
 
     for (int i = 0; i < tests; ++i)
     {
-        fflush(stdout);
+        result = 0;
         scanf("%d%d", &blocks, &money);
-        printf("ITER = [%d], B: %d, M: %d\n", i, blocks, money);
         int array[blocks];
         for (int j = 0; j < blocks; ++j)
         {
