@@ -7,31 +7,34 @@ int main(void)
 
     while (tests--)
     {
-        int lines;
-        int characters;
+        int lines, characters;
         scanf("%d%d", &lines, &characters);
 
         for (int i = 0; i < lines; ++i)
         {
-            for (int j = 0; j < characters; ++j)
+            if (i == 0 || (i == lines - 1))
             {
-                if ((i + j) == 0)
+                for (int j = 0; j < characters; ++j)
                 {
                     printf("*");
                 }
-                else
+                puts("");
+            }
+            else
+            {
+                for (int j = 0; j < characters; ++j)
                 {
-                    if ((i + j) % 2)
-                    {
-                        printf(".");
-                    }
-                    else
+                    if (j == 0 || (j == characters - 1))
                     {
                         printf("*");
                     }
+                    else
+                    {
+                        printf(".");
+                    }
                 }
+                puts("");
             }
-            puts("");
         }
         puts("");
     }
