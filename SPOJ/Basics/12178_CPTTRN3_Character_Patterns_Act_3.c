@@ -2,19 +2,22 @@
 
 int main(void)
 {
-    int tests;
+    unsigned int tests;
     scanf("%d", &tests);
 
     while (tests--)
     {
-        int lines, characters;
+        unsigned int lines, characters;
         scanf("%d%d", &lines, &characters);
-
-        for (int i = 0; i < lines; ++i)
+        for (unsigned int i = 0; i < lines * 4 - (lines - 1); ++i)
         {
-            for (int j = 0; j < characters; ++j)
+            for (unsigned int j = 0; j < characters * 3 + 1; ++j)
             {
-                if (j == 0 || (j == characters - 1))
+                if (i == 0 || (i % 3 == 0))
+                {
+                    printf("*");
+                }
+                else if (j == 0 || (j % 3 == 0))
                 {
                     printf("*");
                 }
@@ -27,6 +30,5 @@ int main(void)
         }
         puts("");
     }
-
     return 0;
 }
