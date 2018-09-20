@@ -1,21 +1,14 @@
 #include <stdio.h>
-
-int main(void) // result 162
+int main()  //111 with no return 0;
 {
-    int tests;
-    int sum = 0;
-    scanf("%d", &tests);
-
-    while (tests--)
-    {
-        int value;
-        scanf("%d", &value);
-        if (value > 0)
-        {
-            sum += value;
-        }
+    int t, s = 0;
+    scanf("%d", &t);
+    while (t--){
+        int v;
+        scanf("%d", &v);
+        if (v > 0)
+            s += v;
     }
-    printf("%d", sum);
-
+    printf("%d", s);
     return 0;
 }
