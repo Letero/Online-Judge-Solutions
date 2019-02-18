@@ -1,4 +1,4 @@
-//https://www.codewars.com/kata/555615a77ebc7c2c8a0000b8/solutions/cpp
+//https://www.codewars.com/kata/555615a77ebc7c2c8a0000b8/train/cpp
 
 std::string tickets(const std::vector<int> peopleInLine)
 {

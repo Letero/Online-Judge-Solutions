@@ -1,5 +1,5 @@
+//https://www.codewars.com/kata/sum-of-digits-slash-digital-root/train/cpp
 //version 1
-
 int calc(int n)
 {
     int rest = 0;
@@ -23,7 +23,6 @@ int digital_root(int n)
 }
 
 //refactored version
-
 int digital_root(int n)
 {
     return --n % 9 + 1;
