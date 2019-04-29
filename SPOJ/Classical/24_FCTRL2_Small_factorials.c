@@ -11,9 +11,9 @@ int main(void)
         int answer[1000] = {1};
         int m = 0; // amount of numbers stored in array
         int carry = 0;
-        for (int i = 1; i <= n; i++)
+        for (int i = 1; i <= n; ++i)
         {
-            for (int j = 0; j <= m; j++)
+            for (int j = 0; j <= m; ++j)
             {
                 answer[j] = (answer[j] * i) + carry;
                 printf("a[j] = %d\n", answer[j]);
@@ -31,7 +31,7 @@ int main(void)
             }
         }
 
-        for (int i = m; i >= 0; i--) // print from rear end - m stores how many numbers are saved in array
+        for (int i = m; i >= 0; --i) // print from rear end - m stores how many numbers are saved in array
         {
             printf("%d", answer[i]);
         }
